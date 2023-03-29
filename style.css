@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bj {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    object-fit: cover;
+}
+
+.v1 {
+    width: 210px;
+    height: 130px;
+    float: left;
+    position: absolute;
+    left: 2%;
+    bottom: 4%;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.download {
+    width: 90px;
+    height: 90px;
+}
+
+.play {
+    width: 85px;
+    height: 80px;
+    padding-left: 80px;
+    padding-top: 28px;
+}
+
+.box2 {
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+.box2 video {
+    width: 1000px;
+    z-index: -11;
+}
+
+.box {
+    display: flex;
+    position: absolute;
+    bottom: 8%;
+    background-color: whitesmoke;
+    width: 370px;
+    height: 140px;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+button {
+    z-index: -1;
+    width: 130px;
+    height: 130px;
+    background-color: rgba(8, 141, 236, 0.971);
+    outline: none;
+    position: absolute;
+    right: 2%;
+    top: 4%;
+    border: none;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 2;
+}

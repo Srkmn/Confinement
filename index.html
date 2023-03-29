@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <video src="视频2.mp4" class="bj" autoplay loop muted></video>
+    <div class="box">
+        <img class="play" src="播放_play-one.png">
+        <video src="视频1.mp4" class="v1" autoplay muted loop></video>
+        <button id="btn"><a href="https://pan.baidu.com/s/1TUk_ly0A3NQ9_C5gDRH6-A"><img src="下载_download.png" class="download"></a></button>
+    </div>
+    <div class="box2">
+        <span class="close">&#10005;</span>
+        <video src="视频1.mp4" class="v2" controls></video>
+    </div>
+    <script>
+        var $play = document.querySelector(".play");
+        var $box2 = document.querySelector(".box2");
+        var $video2 = document.querySelector(".v2");
+        var $close = document.querySelector(".close");
+        $play.addEventListener("click", function() {
+            $box2.style.display = "block";
+            $video2.play();
+        });
+        $close.addEventListener("click", function() {
+            $box2.style.display = "none";
+            $video2.pause();
+        });
+        document.addEventListener("click", function(event) {
+            if (!event.target.closest(".box2") && event.target !== $play) {
+                $box2.style.display = "none";
+                $video2.pause();
+            }
+        });
+        var $eleBtn1 = $("#btn");
+
+        //已知一个下载文件的后端接口：https://codeload.github.com/douban/douban-client/legacy.zip/master
+        //方法一：window.open()
+        $eleBtn1.click(function() {
+            window.open("https://codeload.github.com/douban/douban-client/legacy.zip/master");
+        });
+    </script>
+</body>
+
+</html>
